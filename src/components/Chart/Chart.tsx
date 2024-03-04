@@ -33,7 +33,7 @@ function Chart({ width, height, candles, onCandleSelect }: ChartProps) {
       setSelectedCandle(null);
       onCandleSelect(null);
     }
-  }, 50);
+  }, 25);
 
   useEffect(() => {
     const canvas = canvasRef.current;

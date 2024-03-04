@@ -1,6 +1,0 @@
-
-Name of Assignee: Andrew Renke
-
-Approximate time taken to complete the assignment: 2 hours
-
-One thing that I would suggest to improve about this assignment: More detailed acceptance criteria

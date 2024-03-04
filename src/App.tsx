@@ -5,6 +5,7 @@ import CandleInfo from "./components/CandleInfo";
 import Chart from "./components/Chart";
 import { useCandleLoader } from "./hooks/useCandleLoader";
 import { Candle } from "types/candle";
+import { throttle } from "utils/throttle";
 
 function App() {
   const url = new URL(window.location.href);
@@ -28,12 +29,12 @@ function App() {
   );
 
   useEffect(() => {
-    const handleResize = () => {
+    const handleResize = throttle(() => {
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth,
       });
-    };
+    }, 25);
 
     window.addEventListener("resize", handleResize);
 
